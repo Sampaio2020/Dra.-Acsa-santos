@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+.projetos {
+    text-align: center;
+    padding: 60px 50px;
+    background-image: url(./img/logo.jpeg);
+    background-size: cover;
+    background-position: center;
+    
+
+}
+
+.projetos h2 {
+    font-size: 1.4em;
+    margin-bottom: 25px;
+    color: #333;
+    font-family: 'Cinzel Decorative', serif;
+}
+
+.card-projetos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colunas */
+    gap: 15px;
+    /* espaçamento entre os cards */
+    justify-items: center;
+}
+
+.card {
+    background-color: #fafafa;
+    border-radius: 15px;
+    border: 1px solid #f3ae55;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    max-width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 60%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.card h3 {
+    color: #ba9b0b;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 1.1em;
+    color: #474646;
+    line-height: 1.5;
+}
+
+/* iPad (médio: paisagem e retrato) */
+@media (max-width: 1024px) {
+    .projetos {
+        padding: 50px 30px;
+    }
+
+    .projetos h2 {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+    }
+
+    .card-projetos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .card {
+        max-width: 280px;
+        padding: 20px;
+    }
+
+    .card img {
+        margin-bottom: 20px;
+    }
+
+    .card h3 {
+        font-size: 1.1em;
+    }
+
+    .card p {
+        font-size: 1em;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .projetos {
+        padding: 40px 20px;
+    }
+
+    .projetos h2 {
+        font-size: 1.2em;
+    }
+
+    .card-projetos {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .card {
+        max-width: 90%;
+        padding: 18px;
+    }
+
+    .card img {
+        margin-bottom: 15px;
+    }
+
+    .card h3 {
+        font-size: 1em;
+    }
+
+    .card p {
+        font-size: 0.95em;
+        line-height: 1.4;
+    }
+}
